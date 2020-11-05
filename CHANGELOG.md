@@ -6,11 +6,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.10] - 2020-11-05
+## [0.1.15] - 2020-11-05
 ### Added
 - Assets png files
-- BlazorApp solution
+  - localhost_counter.png
+  - localhost_dialog.png
+  - localhost_fetchdata.png
+  - localhost_home.png
+  - localhost_todo.png
 - .gitattributes
 - .gitignore
 - LICENSE.md
 - README.md
+- BlazorApp solution
+  - Pages\_Host.cshtml
+  - Pages\Counter.razor
+  - Pages\Dialog.razor
+  - Pages\Error.cshtml
+  - Pages\FetchData.razor
+  - Pages\Index.razor
+  - Pages\Todo.razor
+  - Data\TodoItem.cs
+  - Data\WeatherForecast.cs
+  - Data\WeatherForecastService.cs
+  - Shared\MainLayout.razor
+  - Shared\NavMenu.razor
+  - Shared\SurveyPrompt.razor
+  - _Imports.razor
+  - App.razor
+  - appsettings.json
+  - Program.cs
+  - Startup.cs
