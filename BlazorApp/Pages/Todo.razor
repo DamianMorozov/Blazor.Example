@@ -15,7 +15,7 @@
 
 <input placeholder="Something todo" @bind="_newTodo"/>
 
-<button class="btn-dark" @onclick="AddTodo">Add todo</button>
+<button class="btn btn-dark" @onclick="AddTodo">Add todo</button>
 
 @code {
     private readonly IList<TodoItem> _todos = new List<TodoItem>();
