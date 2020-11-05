@@ -10,4 +10,8 @@
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(SolutionDir)CHANGELOG.md&quot; &quot;$(TargetDir)&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)LICENSE.md&quot; &quot;$(TargetDir)&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)README.md&quot; &quot;$(TargetDir)&quot; /Y" />
+  </Target>
+
 </Project>
