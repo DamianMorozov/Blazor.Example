@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.16] - 2020-11-09
+### Changed
+- BlazorApp\BlazorApp.csproj
+- BlazorApp\Data\WeatherForecastService.cs
+
 ## [0.1.15] - 2020-11-05
 ### Added
 - Assets png files
@@ -18,7 +23,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - .gitignore
 - LICENSE.md
 - README.md
-- BlazorApp solution
+- BlazorApp project
   - Pages\_Host.cshtml
   - Pages\Counter.razor
   - Pages\Dialog.razor
