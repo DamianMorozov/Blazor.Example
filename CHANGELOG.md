@@ -6,10 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.16] - 2020-11-09
+## [0.1.20] - 2020-11-09
+### Added
+- BlazorSignalRApp.Client project
+- BlazorSignalRApp.Server project
+- BlazorSignalRApp.Shared project
 ### Changed
-- BlazorApp\BlazorApp.csproj
-- BlazorApp\Data\WeatherForecastService.cs
+- BlazorApp project
+- README.md
 
 ## [0.1.15] - 2020-11-05
 ### Added
