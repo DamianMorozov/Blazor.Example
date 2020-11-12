@@ -6,7 +6,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.1.30] - 2020-11-12
+## [0.1.60] - 2020-11-12
+### Added
+- BlazorServerApp
+  - Radzen.Blazor nuget package (https://www.nuget.org/packages/Radzen.Blazor/)
+  - Components.RadzenSample.Dialog
+  - Components.RadzenSample.DialogCard
+  - Components.RadzenSample.Notification
+  - Components.RadzenSample.Tooltip
+  - Components.RadzenSample.ContextMenu
+  - Components.Attribute
+  - Components.Content
+  - Components.CounterAsync
+### Changed
+- BlazorServerApp
+  - Components.Forest
+  - Components.Counter
+
+## [0.1.30] - 2020-11-11
 ### Added
 - BlazorServerApp project
 ### Removed

@@ -1,0 +1,12 @@
+﻿@page "/forest"
+@using BlazorServerApp.Components.Forest
+
+<link href="/css/styles.css" rel="stylesheet" type="text/css">
+<h1>@Header</h1>
+<img alt="Forest" src="/Images/forest.jpg" />
+<Tree Header="Tree page" Header2="Top 5 Russian trees" ListTree="@_listTree" />
+
+@code{
+    public string Header = "Forest page";
+    private readonly List<string> _listTree = new List<string>{ "Birch tree", "Oak tree", "Rowan-tree", "Fir-tree", "Maple tree" };
+}

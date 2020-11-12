@@ -1,0 +1,21 @@
+﻿@page "/tree"
+
+<link href="/css/styles.css" rel="stylesheet" type="text/css">
+<h1>@Header</h1>
+<img alt="Tree" src="/Images/tree_1.jpg" />
+<h1>@Header2</h1>
+<ul>
+    @foreach (var tree in ListTree)
+    {
+        <li>@tree</li>
+    }
+</ul>
+
+@code{
+    [Parameter]
+    public string Header { get; set; } = "Tree";
+    [Parameter]
+    public string Header2 { get; set; } = "Trees";
+    [Parameter]
+    public List<string> ListTree { get; set; }
+}

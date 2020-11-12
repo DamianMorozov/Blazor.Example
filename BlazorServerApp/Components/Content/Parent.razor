@@ -1,0 +1,19 @@
+﻿@page "/contentParent"
+@using BlazorServerApp.Components.Content
+
+<link href="/css/styles.css" rel="stylesheet" type="text/css">
+<h1>@Header</h1>
+<Child >
+    <div>
+        <h3> Snippet </h3>
+        <p> Having no high passion </p>
+        <p> Don't spare the sounds of life, </p>
+        <p> Couldn't he iamba from chorea, </p>
+        <p> No matter how we fought, distinguish. </p>
+    </div>
+</Child>
+
+@code{
+    public string Header = "Parent page";
+    private readonly List<string> _listTree = new List<string> { "Birch tree", "Oak tree", "Rowan-tree", "Fir-tree", "Maple tree" };
+}

@@ -1,0 +1,62 @@
+﻿@page "/radzenDialog"
+
+@inject DialogService dialogService
+
+<div class="row">
+    <div class="col-md-6">
+        <h3>Dialog</h3>
+        <RadzenButton Text=@($"Show OrderID: {orderID} details") Click="@(args => dialogService.Open<DialogCard>($"Order {orderID}",
+            new Dictionary<string, object>() { { "OrderID", orderID } },
+            new DialogOptions(){ Width = "700px", Height = "530px", Left = "calc(50% - 350px)", Top = "calc(50% - 265px)" }))" />
+
+        <h3 style="margin-top: 20px;">Simple Dialog</h3>
+        <RadzenButton Text=@($"Show simple dialog") Click="@ShowSimpleDialog" />
+        <h3 style="margin-top: 20px;">Confirm Dialog</h3>
+        <RadzenButton Text=@($"Show confirm dialog") Click="@(args => dialogService.Confirm("Are you sure?", "MyTitle", new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" }))" />
+    </div>
+    <div class="col-md-6">
+        <h3>Events</h3>
+        <RadzenCard style="overflow: auto;height:500px;">
+            @foreach (var e in _events.OrderByDescending(i => i.Key))
+            {
+                @e.Value
+                <br />
+            }
+        </RadzenCard>
+    </div>
+</div>
+
+@code {
+    int orderID = 10248;
+
+    readonly Dictionary<DateTime, string> _events = new Dictionary<DateTime, string>();
+
+    protected override void OnInitialized()
+    {
+        dialogService.OnOpen += Open;
+        dialogService.OnClose += Close;
+    }
+
+    public void Open(string title, Type type, Dictionary<string, object> parameters, DialogOptions options)
+    {
+        _events.Add(DateTime.Now, "Dialog opened");
+        StateHasChanged();
+    }
+
+    public void Close(dynamic result)
+    {
+        _events.Add(DateTime.Now, "Dialog closed. Result: " + result);
+        StateHasChanged();
+    }
+
+    public async Task ShowSimpleDialog() => await dialogService.OpenAsync("Simple Dialog", ds =>
+    @<RadzenCard Style="padding: 20px;">
+        <p Style="margin-bottom: 10px;">Confirm?</p>
+        <div class="row">
+            <div class="col-md-12">
+                <RadzenButton Text="Ok" Click="()=> ds.Close(true)" Style="margin-bottom: 10px; width: 150px" />
+                <RadzenButton Text="Cancel" Click="()=> ds.Close(false)" Style="margin-bottom: 10px; width: 150px" />
+            </div>
+        </div>
+    </RadzenCard>);
+}

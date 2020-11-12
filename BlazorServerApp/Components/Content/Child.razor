@@ -1,0 +1,12 @@
+﻿@page "/contentChild"
+
+<link href="/css/styles.css" rel="stylesheet" type="text/css">
+<h1>@Header</h1>
+<div>@ChildContent</div>
+
+@code{
+    [Parameter]
+    public string Header { get; set; } = "Child page";
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+}

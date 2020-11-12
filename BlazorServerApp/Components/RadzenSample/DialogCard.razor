@@ -1,0 +1,44 @@
+﻿@page "/radzenDialogcard/{OrderID}"
+
+@inject Radzen.DialogService dialogService
+
+<h1>Dialog with parameters</h1>
+
+<p>This page demonstrates <b>Dialog</b> component with parameters.</p>
+<h3>OrderID: @OrderID</h3>
+<RadzenCard Style="margin-bottom: 20px;">
+    <div class="row">
+        <div class="col-md-6">
+            <div>Company:</div>
+            <b>CompanyName</b>
+            <div style="margin-top:20px">Employee:</div>
+            <br />
+        </div>
+        <div class="col-md-6">
+            <div>Freight:</div>
+            <div style="margin-top:20px">Ship country:</div>
+            <div style="margin-top:20px">Ship city:</div>
+            <div style="margin-top:20px">Ship name:</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Order Details</h3>
+        </div>
+    </div>
+</RadzenCard>
+<div class="row">
+    <div class="col-md-12">
+        <RadzenButton Click="@((args) => dialogService.Close(true))" Text="OK" Style="margin-bottom: 10px; width: 150px" />
+        <RadzenButton Click="@((args) => dialogService.Close(false))" Text="Cancel" Style="margin-bottom: 10px; width: 150px" />
+    </div>
+</div>
+
+@code {
+    [Parameter] public int OrderID { get; set; }
+
+    protected override void OnInitialized()
+    {
+        //
+    }
+}

@@ -16,7 +16,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalRApp.Client", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalRApp.Shared", "BlazorSignalRApp\Shared\BlazorSignalRApp.Shared.csproj", "{896966E9-E381-4579-A17F-FC53AB544439}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{0C4CD3D5-6FEF-48CE-B4C1-AF84942A349D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{0C4CD3D5-6FEF-48CE-B4C1-AF84942A349D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

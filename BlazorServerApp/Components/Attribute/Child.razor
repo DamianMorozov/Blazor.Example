@@ -1,0 +1,14 @@
+﻿@page "/attributeChild"
+
+<h1>@Header</h1>
+<h3>@Title</h3>
+<input id="useAge" @attributes="InputAttributes" />
+
+@code {
+    [Parameter]
+    public string Header { get; set; } = "Component page";
+    [Parameter]
+    public string Title { get; set; } = "Input Age";
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> InputAttributes { get; set; } 
+}

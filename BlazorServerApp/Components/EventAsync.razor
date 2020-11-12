@@ -1,0 +1,36 @@
+﻿@page "/eventAsync"
+
+<h1>Counter</h1>
+
+<span>Increment/decrement amount (press Ctrl + button)</span>
+<input @bind="IncrementAmount" />
+
+<br />
+<RadzenButton class="btn btn-dark" Click="DecrementAsync">async -</RadzenButton>
+<span>Current count: @_currentCount</span>
+<RadzenButton class="btn btn-dark" Click="IncrementAsync">async +</RadzenButton>
+
+@code {
+    private int _currentCount;
+
+    [Parameter]
+    public int IncrementAmount { get; set; } = 5;
+
+    private async Task IncrementAsync(MouseEventArgs e)
+    {
+        await Task.Delay(TimeSpan.FromMilliseconds(10)).ConfigureAwait(false);
+        if (e.CtrlKey)
+            _currentCount += IncrementAmount;
+        else
+            _currentCount++;
+    }
+
+    private async Task DecrementAsync(MouseEventArgs e)
+    {
+        await Task.Delay(TimeSpan.FromMilliseconds(10)).ConfigureAwait(false);
+        if (e.CtrlKey)
+            _currentCount -= IncrementAmount;
+        else
+            _currentCount--;
+    }
+}

@@ -1,0 +1,34 @@
+﻿@page "/event"
+
+<h1>Counter</h1>
+
+<span>Increment/decrement amount (press Ctrl + button)</span>
+<input @bind="IncrementAmount" />
+
+<br />
+<RadzenButton class="btn btn-dark" Click="Decrement">-</RadzenButton>
+<span>Current count: @_currentCount</span>
+<RadzenButton class="btn btn-dark" Click="Increment">+</RadzenButton>
+
+@code {
+    private int _currentCount;
+
+    [Parameter]
+    public int IncrementAmount { get; set; } = 5;
+
+    private void Increment(MouseEventArgs e)
+    {
+        if (e.CtrlKey)
+            _currentCount += IncrementAmount;
+        else
+            _currentCount++;
+    }
+
+    private void Decrement(MouseEventArgs e)
+    {
+        if (e.CtrlKey)
+            _currentCount -= IncrementAmount;
+        else
+            _currentCount--;
+    }
+}
