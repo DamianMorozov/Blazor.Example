@@ -10,12 +10,12 @@
 ###### [ASP.NET Core Blazor hosting models](https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models)
 ###### [Use ASP.NET Core SignalR with Blazor WebAssembly](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr-blazor-webassembly)
 
-## Screenshots BlazorApp
-![](Assets/BlazorApp_home.png?raw=true)
-![](Assets/BlazorApp_counter.png?raw=true)
-![](Assets/BlazorApp_todo.png?raw=true)
-![](Assets/BlazorApp_dialog.png?raw=true)
-![](Assets/BlazorApp_fetchdata.png?raw=true)
+## Screenshots BlazorServerApp
+![](Assets/BlazorServerApp_home.png?raw=true)
+![](Assets/BlazorServerApp_counter.png?raw=true)
+![](Assets/BlazorServerApp_todo.png?raw=true)
+![](Assets/BlazorServerApp_dialog.png?raw=true)
+![](Assets/BlazorServerApp_fetchdata.png?raw=true)
 
 ## Screenshots BlazorSignalRApp
 ![](Assets/BlazorSignalRApp_ExchangeMessages.png?raw=true)

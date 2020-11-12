@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "BlazorApp\BlazorApp.csproj", "{7F9130CF-66ED-413B-BDEF-293F56046B87}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{40F4FECD-5617-4119-B805-2672B87A8099}"
 	ProjectSection(SolutionItems) = preProject
 		CHANGELOG.md = CHANGELOG.md
@@ -12,11 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalRApp.Server", "BlazorSignalRApp\Server\BlazorSignalRApp.Server.csproj", "{31C0C020-9068-4A63-8F3C-8624ADC863F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalRApp.Server", "BlazorSignalRApp\Server\BlazorSignalRApp.Server.csproj", "{31C0C020-9068-4A63-8F3C-8624ADC863F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalRApp.Client", "BlazorSignalRApp\Client\BlazorSignalRApp.Client.csproj", "{4E52FDEC-5236-4AF4-8619-062B527DA347}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalRApp.Client", "BlazorSignalRApp\Client\BlazorSignalRApp.Client.csproj", "{4E52FDEC-5236-4AF4-8619-062B527DA347}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorSignalRApp.Shared", "BlazorSignalRApp\Shared\BlazorSignalRApp.Shared.csproj", "{896966E9-E381-4579-A17F-FC53AB544439}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorSignalRApp.Shared", "BlazorSignalRApp\Shared\BlazorSignalRApp.Shared.csproj", "{896966E9-E381-4579-A17F-FC53AB544439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerApp", "BlazorServerApp\BlazorServerApp.csproj", "{0C4CD3D5-6FEF-48CE-B4C1-AF84942A349D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,10 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F9130CF-66ED-413B-BDEF-293F56046B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F9130CF-66ED-413B-BDEF-293F56046B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F9130CF-66ED-413B-BDEF-293F56046B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F9130CF-66ED-413B-BDEF-293F56046B87}.Release|Any CPU.Build.0 = Release|Any CPU
 		{31C0C020-9068-4A63-8F3C-8624ADC863F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{31C0C020-9068-4A63-8F3C-8624ADC863F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31C0C020-9068-4A63-8F3C-8624ADC863F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -40,6 +36,10 @@ Global
 		{896966E9-E381-4579-A17F-FC53AB544439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{896966E9-E381-4579-A17F-FC53AB544439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{896966E9-E381-4579-A17F-FC53AB544439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C4CD3D5-6FEF-48CE-B4C1-AF84942A349D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C4CD3D5-6FEF-48CE-B4C1-AF84942A349D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C4CD3D5-6FEF-48CE-B4C1-AF84942A349D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C4CD3D5-6FEF-48CE-B4C1-AF84942A349D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
