@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.61] - 2020-11-13
+### Changed
+- BlazorServerApp .NET 5.0
+- BlazorSignalRApp.Server .NET 5.0
+
 ## [0.1.60] - 2020-11-12
 ### Added
 - BlazorServerApp
