@@ -20,6 +20,7 @@
 ![](Assets/BlazorServerApp_fetchdata.png?raw=true)
 ![](Assets/BlazorServerApp_forest.png?raw=true)
 ![](Assets/BlazorServerApp_content.png?raw=true)
+![](Assets/BlazorServerApp_eventcallback.png?raw=true)
 ![](Assets/BlazorServerApp_attribute.png?raw=true)
 ![](Assets/BlazorServerApp_dialogservice.png?raw=true)
 ![](Assets/BlazorServerApp_notificationservice.png?raw=true)

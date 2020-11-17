@@ -1,0 +1,54 @@
+﻿@page "/eventCallbackParent"
+@using BlazorServerApp.Components.EventCallback
+
+<link href="/css/styles.css" rel="stylesheet" type="text/css">
+<h1>@Header</h1>
+
+<Child ClickCallbackDecrement="@Decrement" ClickCallbackIncrement="@Increment"
+       ClickCallbackMouse="@MouseClick" 
+       ClickCallbackString1="AddUsers" ClickCallbackString2="AddUsers">
+    <div>Counter: @_counter</div>
+    <br />
+    <div>X coord: @_x</div>
+    <div>Y coord: @_y</div>
+    <br />
+    <ul>
+        <li>User list</li>
+        @foreach (var user in _users)
+        {
+            <li>User: @user</li>
+        }
+    </ul>
+</Child>
+
+@code{
+    private int _counter = 0;
+    private double _x = 0;
+    private double _y = 0;
+    private readonly HashSet<string> _users = new HashSet<string>();
+
+    [Parameter]
+    public string Header { get; set; } = "EventCallback parent page";
+
+    private void Increment()
+    {
+        _counter++;
+    }
+
+    private void Decrement()
+    {
+        _counter--;
+    }
+
+    private void MouseClick(MouseEventArgs args)
+    {
+        _x = args.ClientX;
+        _y = args.ClientY;
+    }
+
+    private void AddUsers(string user)
+    {
+        if (!string.IsNullOrEmpty(user))
+            _users.Add(user);
+    }
+}

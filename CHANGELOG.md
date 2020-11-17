@@ -6,14 +6,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.64] - 2020-11-17
+### Added
+- BlazorServerApp project
+  - EventCallback
+  - EventCallback<T>
+  - EventCallback<string>
+
 ## [0.1.61] - 2020-11-13
 ### Changed
-- BlazorServerApp .NET 5.0
-- BlazorSignalRApp.Server .NET 5.0
+- BlazorServerApp project using .NET 5.0
+- BlazorSignalRApp.Server project using .NET 5.0
 
 ## [0.1.60] - 2020-11-12
 ### Added
-- BlazorServerApp
+- BlazorServerApp project
   - Radzen.Blazor nuget package (https://www.nuget.org/packages/Radzen.Blazor/)
   - Components.RadzenSample.Dialog
   - Components.RadzenSample.DialogCard
@@ -24,7 +31,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Components.Content
   - Components.CounterAsync
 ### Changed
-- BlazorServerApp
+- BlazorServerApp project
   - Components.Forest
   - Components.Counter
 

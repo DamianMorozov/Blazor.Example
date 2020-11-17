@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <Version>0.1.60</Version>
+    <Version>0.1.64</Version>
     <Authors>Damian Viktorovich Morozov</Authors>
     <UserSecretsId>993a2cab-36f2-4b69-a954-68c43db890b1</UserSecretsId>
     <StartupObject>BlazorServerApp.Program</StartupObject>
@@ -20,9 +20,5 @@
   <ItemGroup>
     <PackageReference Include="Radzen.Blazor" Version="2.16.3" />
   </ItemGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy &quot;$(SolutionDir)CHANGELOG.md&quot; &quot;$(TargetDir)&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)LICENSE.md&quot; &quot;$(TargetDir)&quot; /Y&#xD;&#xA;xcopy &quot;$(SolutionDir)README.md&quot; &quot;$(TargetDir)&quot; /Y" />
-  </Target>
 
 </Project>

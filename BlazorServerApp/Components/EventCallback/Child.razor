@@ -1,0 +1,57 @@
+﻿@page "/eventCallbackChild"
+@using Microsoft.AspNetCore.Components.Web
+
+<link href="/css/styles.css" rel="stylesheet" type="text/css">
+<h1>@Header</h1>
+
+<br />
+<h2>@Header1</h2>
+<RadzenButton Text="Decrement" Click="ClickCallbackDecrement" ButtonStyle="ButtonStyle.Primary" Style="margin-bottom: 20px; width: 150px" />
+<RadzenButton Text="Increment" Click="ClickCallbackIncrement" ButtonStyle="ButtonStyle.Primary" Style="margin-bottom: 20px; width: 150px" />
+
+<br />
+<h2>@Header2</h2>
+<RadzenButton Text="Mouse click" Click="ClickCallbackMouse" ButtonStyle="ButtonStyle.Primary" Style="margin-bottom: 20px; width: 200px; height: 200px" />
+
+<br />
+<h3>@Header3</h3>
+<div>
+    <div>Add user:</div>
+    <input type="text" @bind-value="@_item" />
+    <RadzenButton Text="ClickCallbackString method 1" Click="@(() => ClickCallbackString1.InvokeAsync(_item))"
+                  ButtonStyle="ButtonStyle.Primary" Style="margin-bottom: 20px; width: 350px; " />
+    <RadzenButton Text="ClickCallbackString method 2" Click="Click2"
+                  ButtonStyle="ButtonStyle.Primary" Style="margin-bottom: 20px; width: 350px; " />
+</div>
+
+<br />
+<div>@ChildContent</div>
+
+@code{
+    [Parameter]
+    public string Header { get; set; } = "EventCallback child page";
+    [Parameter]
+    public string Header1 { get; set; } = "EventCallback";
+    [Parameter]
+    public string Header2 { get; set; } = "EventCallback<T>";
+    [Parameter]
+    public string Header3 { get; set; } = "EventCallback<strings>";
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public EventCallback ClickCallbackIncrement { get; set; }
+    [Parameter]
+    public EventCallback ClickCallbackDecrement { get; set; }
+    [Parameter]
+    public EventCallback<MouseEventArgs> ClickCallbackMouse { get; set; }
+    private string _item = "";
+    [Parameter]
+    public EventCallback<string> ClickCallbackString1 { get; set; }
+
+    [Parameter]
+    public EventCallback<string> ClickCallbackString2 { get; set; }
+    public void Click2()
+    {
+        ClickCallbackString2.InvokeAsync(_item);
+    }
+}
